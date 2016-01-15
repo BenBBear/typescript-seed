@@ -1,0 +1,34 @@
+{
+  "name": "typescript-seed",
+  "version": "0.0.1",
+  "description": "A seed project for typescript web project.",
+  "main": "index.js",
+  "scripts": {
+    "serve": "./node_modules/http-server/bin/http-server -p 8130",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Xinyu Zhang",
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-typedoc": "^1.2.1",
+    "gulp-webpack": "^1.5.0",
+    "object-assign": "^4.0.1",
+    "webpack-stream": "^3.1.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-if": "^2.0.0",
+    "gulp-minify-css": "^1.2.3",
+    "gulp-param": "^0.6.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.1",
+    "gulp-typescript": "^2.10.0",
+    "gulp-uglify": "^1.5.1",
+    "http-server": "^0.8.5",
+    "sassdoc": "^2.1.19",
+    "ts-loader": "^0.7.2"
+  }
+}
