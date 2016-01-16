@@ -4,6 +4,6 @@ The seed use [Typedoc](http://typedoc.io/) and [Sassdoc2](http://sassdoc.com/) t
 
 
 
-- Typescript documentation: http://benbbear.github.io/typescript-seed/ts
+- [Typescript documentation](ts/)
 
-- Sass Documentation: http://benbbear.github.io/typescript-seed/scss
+- [Sass Documentation](scss/)
