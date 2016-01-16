@@ -1,4 +1,4 @@
-import Helloworld from './classes/Helloworld.ts'
+import Helloworld from './classes/DocExample.ts'
 
 
 function main(){

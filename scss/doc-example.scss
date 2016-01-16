@@ -1,0 +1,109 @@
+/// This is a file with some examples of sassdoc
+/// @author Xinyu
+/// @todo Task to be done
+
+
+/// @see .hide
+/// @access private
+.private-hide{
+   display:none;
+}
+
+
+/// Here is the description
+/// On several lines if you will
+/// @access public
+.hide{
+   display:none;
+}
+
+
+
+/// @deprecated Deprecation related message
+.display-none{
+    display:none;
+}
+
+
+/// @content Description of keyframes
+/// @example
+///     @include keyframes(bounce){
+///         0%   {
+///              @include transform(scale(1));
+///          }  
+///          50% {
+///              @include transform(scale(1.2));
+///          }
+///         100% {
+///              @include transform(scale(1));
+///          }
+///     }
+///
+/// @group venderHelpers
+/// @ignore Message won't be in the doc
+/// @link http://joshbroton.com/quick-fix-sass-mixins-for-css-keyframe-animations/
+/// @output Keyframes declaration for all browsers
+///
+/// @param {String} $animationName - the name of animation
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+
+
+
+
+
+/// @type Bool
+$True: true;
+
+
+/// @throw Error related message
+/// @require $True
+@function throwError($stuff){
+    @if ($stuff == $True){
+       @error "Sorry, but `#{$stuff}` is not a valid value for $stuff.";
+    } @else{
+        @return 1;
+    }
+}
+
+
+/// @since 0.0.0
+/// @alias  clampAlias
+/// @return {Number} description
+@function clamp($value, $min, $max) {
+  @return if($value > $max, $max, if($value < $min, $min, $value));
+}
+
+
+/// @return {Number} description
+@function clampAlias($value, $min, $max) {
+  @return if($value > $max, $max, if($value < $min, $min, $value));
+}
+
+
+
+$aList:(1px,3px,5px);
+
+
+/// Good with @each
+/// @prop {Color} colorMap.color1 [default value] - description
+$colorMap: (
+    color1 #517fa4, 
+    color2 #152e51
+);
+
+
+$x:throwError(false);
