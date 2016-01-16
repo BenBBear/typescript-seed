@@ -23,6 +23,9 @@ Include lots of goodness and give your a comfortable start on a frontend project
 git clone https://github.com/BenBBear/typescript-seed  
 cd ./typescript-seed
 git clone -b gh-pages --single-branch  https://github.com/BenBBear/typescript-seed doc 
+cd ..
+npm install gulp -g
+npm install
 ## Done
 ```
 
