@@ -1,6 +1,6 @@
 # Logs
 
-./doc/
+/doc/
 logs
 *.log
 npm-debug.log*
