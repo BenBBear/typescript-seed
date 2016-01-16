@@ -1,19 +1,20 @@
 # Typescript Seed
 
 
-Include lots of goodness:
+Include lots of goodness and give your a comfortable start on a frontend project.
 
-- gulp/webpack compile files into bundle
-- doc generation for sass/ts
-- sassdoc/typescript doc comments example.
+- [Gulp](http://gulpjs.com/)
+- [Webpack](https://webpack.github.io/)
+- Documentaion generation
+- Doc comments example.
 
 
-useful if you 
+**Useful** if you 
 
-- want to write some angular2.
-- like to write modern and typed javascript.
-- hate the setup process for a web frontend project.
-- decide to document your code at the begin.
+- want to write some [angular2](https://github.com/angular/angular) :yum:
+- like  *modern and typed javascript*.
+- headache :tired_face: for build process.
+- decide to **document your code**  :closed_book: at the begin.
 
 ## Install
 
@@ -40,12 +41,8 @@ git clone -b gh-pages --single-branch  https://github.com/BenBBear/typescript-se
 ## without minify if has debug option
 gulp sass  [--debug]
 
-## compile sass into one css file, and save it into public/app.css
-## with minify
-gulp sass  
-
-
 ## compile ts into one js file, and save it into public/app.js
+## use webpack, so module/import is supported
 ## if debug option, app.js won't be minify and sourcemap will be inlined.
 gulp ts  [--debug]
 
@@ -71,9 +68,9 @@ gulp watch
 
 ## Generate Doc
 
+It use [Typedoc](http://typedoc.io/) and [Sassdoc2](http://sassdoc.com) to generate documenation websites.
 
 ```shell
-
 ## generate doc for sass, and output into doc/scss
 gulp doc-sass
 
@@ -85,7 +82,7 @@ gulp doc
 ```
 
 
-## Doc example
+## Doc Comments example
 
 In case you are not familar with doc commenting for sass/ts. 
 
@@ -97,6 +94,9 @@ In case you are not familar with doc commenting for sass/ts.
 ## Create github pages for your documentation
 
 ```shell
+gulp doc
 cd ./doc
 git push origin gh-pages 
 ```
+
+Example: http://benbbear.github.io/typescript-seed/
