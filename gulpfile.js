@@ -10,10 +10,11 @@ var gulp = require('gulp-param')(require('gulp'), process.argv),
     wp = require('gulp-webpack'),
     objectAssign = require('object-assign'),
     typedoc = require('gulp-typedoc'),
-    sassdoc = require('sassdoc');
-    
+    sassdoc = require('sassdoc'),
+    file = require('gulp-file');
 
 var doc = {
+    dir:'./doc/',
     ts: {
         module: "commonjs",
         target: "es5",
@@ -97,12 +98,18 @@ gulp.task('doc-sass',function(){
 });
 
 
+gulp.task('no-jekyll',function(){
+    return file('.nojekyll', "")
+    .pipe(gulp.dest(doc.dir));
+})
+
+
 gulp.task('watch-sass',function(){
     gulp.watch(sources.scss, ['sass']);
 });
 gulp.task('watch',['watch-sass','watch-ts'])
 
 gulp.task('build',['sass','ts']);
-gulp.task('doc',['doc-sass','doc-ts'])
+gulp.task('doc',['doc-sass','doc-ts','no-jekyll'])
 gulp.task('default',['build']);
 
